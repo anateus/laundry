@@ -27,6 +27,7 @@ $('#leaving').on('change', function(e) {
 $('#loads').on('change', function(e) {
     var loads = $(e.currentTarget).val();
     $('#loadnum').text(loads);
+    $('#leaving').change();
 });
 
 $('#leaving').change();
