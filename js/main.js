@@ -3,7 +3,7 @@ var dry = 60*60000;     // 60 mins
 var buffer = 15*60000;  // 15 mins
 
 var loadtime = new Date();
-loadtime.setHours(loadtime.getHours()+2);
+loadtime.setHours(Math.min(23, loadtime.getHours()+2));
 $('#leaving').val(loadtime.getHours()+":"+loadtime.getMinutes());
 
 $('#leaving').on('change', function(e) {
