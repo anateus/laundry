@@ -13,7 +13,7 @@ $('#leaving').on('change', function(e) {
     leaving.setMinutes(time[1]);
     var now = new Date();
     var loads = parseInt($('#loads').val());
-    var threshold = 2*buffer+(load*loads)+(dry*loads*0.6);
+    var threshold = 2*buffer+(load*loads)+(dry*Math.ceil(loads*0.6));
     console.log((leaving-now)/60000);
     console.log('Thresold:',threshold/60000);
     if ((leaving-now)<=threshold) {
